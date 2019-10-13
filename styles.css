@@ -1,0 +1,11 @@
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+}
+
+#logo {
+    vertical-align: center;
+    align-content: center;
+}
