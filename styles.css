@@ -3,9 +3,51 @@ body {
     height: 100%;
     width: 100%;
     background-color: brown;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#logo {
-    vertical-align: center;
+.gridcontainer {
+    display: grid;
     align-content: center;
+    justify-content: stretch;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:
+        "nav-left . nav-right"
+        ". logo ."
+        "footer-left . footer-right";
+  }
+
+.nav-left {
+    grid-area: nav-left;
+    justify-self: left;
+}
+
+.nav-right {
+    grid-area: nav-right;
+    justify-self: right;
+}
+
+.footer-left {
+    grid-area: footer-left;
+    justify-self: left;
+}
+
+.footer-right {
+    grid-area: footer-right;
+    justify-self: right;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+    background-color: rgb(38, 156, 48);
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
 }
