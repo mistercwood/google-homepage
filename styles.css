@@ -1,17 +1,17 @@
 
 body {
-    height: 100%;
-    width: 100%;
-    background-color: brown;
+    background-color: grey;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .gridcontainer {
     display: grid;
-    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-content: stretch;
     justify-content: stretch;
-    grid-template-columns: 200px auto 200px;
-    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 500px auto 500px;
+    grid-template-rows: 50px auto 50px;
     grid-template-areas:
         "nav-left . nav-right"
         ". logo ."
@@ -21,6 +21,7 @@ body {
 .nav-left {
     grid-area: nav-left;
     justify-self: left;
+    border: 2px;
 }
 
 .nav-right {
@@ -40,14 +41,23 @@ body {
 
 .logo {
     grid-area: logo;
+    align-self: center;
     justify-self: center;
-    background-color: rgb(38, 156, 48);
+    background-color: rgb(175, 175, 175);
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    padding: 10px;
 }
 
 ul li a {
     text-decoration: none;
+    font-size: 14px;
 }
 
 ul li a:hover {
     text-decoration: underline;
+    list-style-type: none;
 }
