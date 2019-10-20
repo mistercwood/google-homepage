@@ -1,7 +1,9 @@
 
 body {
-    background-color: grey;
+    background-color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
 }
 
 .gridcontainer {
@@ -10,18 +12,17 @@ body {
     height: 100vh;
     align-content: stretch;
     justify-content: stretch;
-    grid-template-columns: 500px auto 500px;
-    grid-template-rows: 50px auto 50px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 40px auto 40px;
     grid-template-areas:
         "nav-left . nav-right"
         ". logo ."
-        "footer-left . footer-right";
+        "footer-left footer-mid footer-right";
   }
 
 .nav-left {
     grid-area: nav-left;
     justify-self: left;
-    border: 2px;
 }
 
 .nav-right {
@@ -32,16 +33,27 @@ body {
 .footer-left {
     grid-area: footer-left;
     justify-self: left;
+    background-color: #F2F2F2;
+    border-top: 1px solid #E4E4E4;
+}
+
+.footer-mid {
+    grid-area: footer-mid;
+    justify-self: stretch;
+    background-color: #F2F2F2;
+    border-top: 1px solid #E4E4E4;
 }
 
 .footer-right {
     grid-area: footer-right;
     justify-self: right;
+    background-color: #F2F2F2;
+    border-top: 1px solid #E4E4E4;
 }
 
 .logo {
     grid-area: logo;
-    align-self: center;
+    align-self: top;
     justify-self: center;
     background-color: rgb(175, 175, 175);
 }
@@ -54,7 +66,8 @@ li {
 
 ul li a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
+    color: #404040;
 }
 
 ul li a:hover {
