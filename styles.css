@@ -1,4 +1,8 @@
 
+* {
+    margin: 0;
+}
+
 body {
     background-color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
@@ -23,16 +27,18 @@ body {
 .nav-left {
     grid-area: nav-left;
     justify-self: left;
+    padding-top: 10px;
 }
 
 .nav-right {
     grid-area: nav-right;
     justify-self: right;
+    padding-top: 10px;
 }
 
 .footer-left {
     grid-area: footer-left;
-    justify-self: left;
+    justify-self: stretch;
     background-color: #F2F2F2;
     border-top: 1px solid #E4E4E4;
 }
@@ -46,16 +52,19 @@ body {
 
 .footer-right {
     grid-area: footer-right;
-    justify-self: right;
+    justify-self: stretch;
     background-color: #F2F2F2;
     border-top: 1px solid #E4E4E4;
+    padding-right: 20px;;
 }
 
 .logo {
     grid-area: logo;
-    align-self: top;
+    align-self: center;
     justify-self: center;
     background-color: rgb(175, 175, 175);
+    position: relative;
+    top: -350px;
 }
 
 li {
@@ -67,10 +76,20 @@ li {
 ul li a {
     text-decoration: none;
     font-size: 13px;
-    color: #404040;
+    color: #5F6368;
 }
 
 ul li a:hover {
     text-decoration: underline;
     list-style-type: none;
+}
+
+.footer-left ul {
+    position: relative;
+    left: -20px;
+}
+
+.footer-right ul {
+    position: relative;
+    float: right;
 }
