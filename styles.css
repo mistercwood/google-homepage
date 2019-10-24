@@ -16,12 +16,12 @@ body {
     height: 100vh;
     align-content: stretch;
     justify-content: stretch;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 40px auto 40px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px auto 40px;
     grid-template-areas:
-        "nav-left . nav-right"
-        ". logo ."
-        "footer-left footer-mid footer-right";
+        "nav-left nav-right"
+        "logo logo"
+        "footer-left footer-right";
   }
 
 .nav-left {
@@ -43,13 +43,6 @@ body {
     border-top: 1px solid #E4E4E4;
 }
 
-.footer-mid {
-    grid-area: footer-mid;
-    justify-self: stretch;
-    background-color: #F2F2F2;
-    border-top: 1px solid #E4E4E4;
-}
-
 .footer-right {
     grid-area: footer-right;
     justify-self: stretch;
@@ -58,19 +51,44 @@ body {
     padding-right: 20px;;
 }
 
-.logo {
+.search-section {
     grid-area: logo;
     align-self: center;
     justify-self: center;
-    background-color: rgb(175, 175, 175);
+    width: 650px;
+    background-color: #DDD;
     position: relative;
-    top: -350px;
+    top: -250px;
+}
+
+form {
+    justify-self: stretch;
+}
+
+.logo {
+    justify-self: center;
+}
+
+.input {
+    width: 600px;
+    height: 40px;
+    align-self: center;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.buttons {
+    color: #5f6368;
+    background-color: #f4f4f4;
+    border: 0px;
+    border-radius: 4px;
+    padding: 10px 15px;
 }
 
 li {
     list-style-type: none;
     float: left;
-    padding: 10px;
+    padding: 10px 20px 0px 10px;
 }
 
 ul li a {
